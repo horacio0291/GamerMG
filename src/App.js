@@ -1,56 +1,11 @@
-import "./App.css";
-import Logo from "./assets/logo.png";
-import Carrito from "./assets/carrito.png";
+import { ItemListContainer } from "./components/body/ItemListContainer";
+import { Navbar } from "./components/navbar/Navbar";
 
 function App() {
   return (
     <div className="App">
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div className="container-fluid ">
-          <a className="navbar-brand" href="#">
-            <img className="logo" src={Logo} alt="logo" width="70px" />
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarColor02"
-            aria-controls="navbarColor02"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div
-            className="collapse navbar-collapse justify-content-center"
-            id="navbarColor02"
-          >
-            <ul className="navbar-nav w-100 justify-content-evenly">
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Equipos Armados
-                  <span className="visually-hidden">(current)</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Componentes
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Extras
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="navbar-brand carrito" href="#">
-                  <img src={Carrito} alt="carrito" width="40px" />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
+      <ItemListContainer product="Monitor" info="Samsung 22''" description="Monitor de 22 pulgadas marca Samsung"/>
     </div>
   );
 }
