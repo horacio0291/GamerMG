@@ -14,7 +14,7 @@ export const ItemCounts = () => {
   };
 
   const onRestar = () => {
-    if (count > 0) {
+    if (count > 1) {
       setCount(count - 1);
     } else return;
   };
