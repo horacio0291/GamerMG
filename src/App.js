@@ -1,4 +1,4 @@
-import { ItemListContainer } from "./components/body/ItemListContainer";
+import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
 import { Navbar } from "./components/navbar/Navbar";
 
 function App() {

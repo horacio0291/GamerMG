@@ -8,7 +8,7 @@ export const CartWidget = () => {
         <a className="navbar-brand carrito" href="#">
           <img src={Carrito} alt="carrito" width="40px" />
         </a>
-          <span>10</span>
+          <span>0</span>
       </li>
     </>
   );
