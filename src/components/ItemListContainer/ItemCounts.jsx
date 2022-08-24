@@ -6,6 +6,7 @@ export const ItemCounts = () => {
   };
 
   const [count, setCount] = useState(1);
+  
 
   const onSumar = () => {
     if (count < monitor.stock) {
@@ -25,21 +26,24 @@ export const ItemCounts = () => {
         <button
           onClick={() => onSumar()}
           type="button"
-          className="btn btn-outline-light"
+          className="btn btn-outline-dark"
+          disabled={
+            count !== monitor.stock ? false : true
+          }
         >
           +
         </button>
-        <span>{count}</span>
+        <span className="text-black">{count}</span>
         <button
           onClick={() => onRestar()}
           type="button"
-          className="btn btn-outline-light"
+          className="btn btn-outline-dark"
         >
           -
         </button>
       </div>
       <div className="d-grid gap-2">
-        <button className="btn btn-lg btn-primary mt-2" type="button">
+        <button className="btn btn-lg btn-dark mt-2" type="button">
           Agregar al carrito
         </button>
       </div>

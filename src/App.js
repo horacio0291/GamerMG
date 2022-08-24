@@ -1,12 +1,17 @@
+import { Carousel } from "./components/carousel/Carousel";
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
+
 import { Navbar } from "./components/navbar/Navbar";
+import { Ribbon } from "./components/ribbon/Ribbon";
 
 function App() {
   return (
-    <div className="App">
+    <divi className="App">
       <Navbar />
-      <ItemListContainer product="Monitor" info="Samsung 22''" description="Monitor de 22 pulgadas marca Samsung"/>
-    </div>
+      <Carousel />
+      <Ribbon />
+      <ItemListContainer product="Monitor ROG" />
+    </divi>
   );
 }
 

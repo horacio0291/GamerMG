@@ -1,23 +1,55 @@
 import React from "react";
-import "./itemListContainer.css";
-import Monitor from "../../assets/monitor-01.webp";
 import { ItemCounts } from "./ItemCounts";
+import "./cards.css";
 
-export const ItemListContainer = ({ product, info, description }) => {
+export const ItemListContainer = ({product}) => {
   return (
-    <div className="container w-25">
-      <div className="card-group">
-        <div className="card m-2">
-          <img
-            src={Monitor}
-            className="card-img-top"
-            alt="monitor"
-          />
-          <div className="card-body">
-            <h5 className="card-title">{info}</h5>
-            <p className="card-text">{description}</p>
-           <ItemCounts/>
+    <div>
+      <div className="container-md p-5">
+        <div className="row pt-5">
+          <h3 className="text-center pb-5 pt-5 h1"> Productos</h3>
+        </div>
+        <div className="row">
+          <div className="col-sm">
+            <div className="card w-100 card-border mb-5">
+              <img
+                src="assets/monitor.webp"
+                className="card-img-top"
+                alt="..."
+              />
+              <div className="card-body bg-white">
+              <p className="text-black text-center">{product}</p>
+                <ItemCounts />
+              </div>
+            </div>
           </div>
+          <div className="col-sm">
+            <div className="card w-100 card-border mb-5">
+              <img
+                src="assets/monitor.webp"
+                className="card-img-top"
+                alt="..."
+              />
+              <div className="card-body bg-white">
+              <p className="text-black text-center">{product}</p>
+                <ItemCounts />
+              </div>
+            </div>
+          </div>
+          <div className="col-sm">
+            <div className="card w-100 card-border mb-5">
+              <img
+                src="assets/monitor.webp"
+                className="card-img-top"
+                alt="..."
+              />
+              <div className="card-body bg-white">
+              <p className="text-black text-center">{product}</p>
+                <ItemCounts />
+              </div>
+            </div>
+          </div>
+          
         </div>
       </div>
     </div>
