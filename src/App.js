@@ -6,12 +6,12 @@ import { Ribbon } from "./components/ribbon/Ribbon";
 
 function App() {
   return (
-    <divi className="App">
+    <div className="App">
       <Navbar />
       <Carousel />
       <Ribbon />
       <ItemListContainer product="Monitor ROG" />
-    </divi>
+    </div>
   );
 }
 

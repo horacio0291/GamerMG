@@ -1,5 +1,3 @@
-import React from "react";
-import Logo from "../../assets/logo.png";
 import { CartWidget } from "./CartWidget";
 import "./navbar.css";
 
@@ -9,7 +7,12 @@ export const Navbar = () => {
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
         <div className="container-fluid ">
           <a className="navbar-brand" href="#">
-            <img className="logo" src={Logo} alt="logo" width="70px" />
+            <img
+              className="logo"
+              src="assets/logo.png"
+              alt="logo"
+              width="70px"
+            />
           </a>
 
           <button

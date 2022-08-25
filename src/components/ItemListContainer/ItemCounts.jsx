@@ -1,15 +1,12 @@
 import React, { useState } from "react";
 
-export const ItemCounts = () => {
-  const monitor = {
-    stock: 5,
-  };
+export const ItemCounts = ({stock}) => {
+ 
 
   const [count, setCount] = useState(1);
-  
 
   const onSumar = () => {
-    if (count < monitor.stock) {
+    if (count < stock) {
       setCount(count + 1);
     } else return;
   };
@@ -27,9 +24,7 @@ export const ItemCounts = () => {
           onClick={() => onSumar()}
           type="button"
           className="btn btn-outline-dark"
-          disabled={
-            count !== monitor.stock ? false : true
-          }
+          disabled={count !== stock ? false : true}
         >
           +
         </button>
@@ -38,6 +33,7 @@ export const ItemCounts = () => {
           onClick={() => onRestar()}
           type="button"
           className="btn btn-outline-dark"
+          disabled={count !== 1 ? false : true}
         >
           -
         </button>

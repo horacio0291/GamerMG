@@ -1,8 +1,18 @@
-import React from "react";
-import { ItemCounts } from "./ItemCounts";
+import { productos } from "./products";
+import { useEffect, useState } from "react";
+import { ItemList } from "./ItemList";
 import "./cards.css";
 
-export const ItemListContainer = ({product}) => {
+export const ItemListContainer = ({ product }) => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const getData = new Promise((res, rej) => {
+      res(productos);
+    });
+    getData.then((res) => setData(res));
+  }, []);
+
   return (
     <div>
       <div className="container-md p-5">
@@ -10,46 +20,7 @@ export const ItemListContainer = ({product}) => {
           <h3 className="text-center pb-5 pt-5 h1"> Productos</h3>
         </div>
         <div className="row">
-          <div className="col-sm">
-            <div className="card w-100 card-border mb-5">
-              <img
-                src="assets/monitor.webp"
-                className="card-img-top"
-                alt="..."
-              />
-              <div className="card-body bg-white">
-              <p className="text-black text-center">{product}</p>
-                <ItemCounts />
-              </div>
-            </div>
-          </div>
-          <div className="col-sm">
-            <div className="card w-100 card-border mb-5">
-              <img
-                src="assets/monitor.webp"
-                className="card-img-top"
-                alt="..."
-              />
-              <div className="card-body bg-white">
-              <p className="text-black text-center">{product}</p>
-                <ItemCounts />
-              </div>
-            </div>
-          </div>
-          <div className="col-sm">
-            <div className="card w-100 card-border mb-5">
-              <img
-                src="assets/monitor.webp"
-                className="card-img-top"
-                alt="..."
-              />
-              <div className="card-body bg-white">
-              <p className="text-black text-center">{product}</p>
-                <ItemCounts />
-              </div>
-            </div>
-          </div>
-          
+          <ItemList data={data} />
         </div>
       </div>
     </div>
