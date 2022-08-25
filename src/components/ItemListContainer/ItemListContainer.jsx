@@ -3,14 +3,16 @@ import { useEffect, useState } from "react";
 import { ItemList } from "./ItemList";
 import "./cards.css";
 
-export const ItemListContainer = ({ product }) => {
+export const ItemListContainer = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const getData = new Promise((res, rej) => {
+    const getData = new Promise((res) => {
       res(productos);
     });
-    getData.then((res) => setData(res));
+    getData
+      .then((res) => setData(res))
+      .catch((err) => console.error(`Ocurrio el siguiente error: ${err}`));
   }, []);
 
   return (
