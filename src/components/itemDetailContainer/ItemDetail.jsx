@@ -9,10 +9,10 @@ export const ItemDetail = ({ detail }) => {
           <div className="col-12">
             <div className="card mb-3">
               <div className="row g-0">
-                <div className="col-md-6">
+                <div className="col-lg-6">
                   <ItemDetailsCarousel detail={detail} />
                 </div>
-                <div className="col-md-6">
+                <div className="col-lg-6">
                   <div className="card-body">
                     <h5 className="card-title">{detail.title}</h5>
                     <hr />
@@ -32,6 +32,7 @@ export const ItemDetail = ({ detail }) => {
                           <li>Envíos a todo el país</li>
                         </ul>
                       </small>
+                      <hr/>
                       <button
                         className="btn btn-lg btn-dark mt-2"
                         type="button"
