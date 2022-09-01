@@ -1,3 +1,4 @@
+import {NavLink} from "react-router-dom"
 import { CartWidget } from "./CartWidget";
 import "./navbar.css";
 
@@ -6,14 +7,14 @@ export const Navbar = () => {
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
         <div className="container-fluid ">
-          <a className="navbar-brand" href="#">
+          <NavLink className="navbar-brand" to="/">
             <img
               className="logo"
               src="assets/logo.png"
               alt="logo"
               width="70px"
             />
-          </a>
+          </NavLink>
 
           <button
             className="navbar-toggler"
@@ -32,20 +33,20 @@ export const Navbar = () => {
           >
             <ul className="navbar-nav w-100 justify-content-evenly">
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <NavLink className="nav-link" to="/componentes">
                   Equipos Armados
                   <span className="visually-hidden">(current)</span>
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <NavLink className="nav-link" to="/componentes">
                   Componentes
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <NavLink className="nav-link" to="/">
                   Extras
-                </a>
+                </NavLink>
               </li>
               <CartWidget />
             </ul>

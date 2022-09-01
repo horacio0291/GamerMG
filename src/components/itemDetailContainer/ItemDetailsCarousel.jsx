@@ -1,6 +1,8 @@
 import React from "react";
 
-export const ItemDetailsCarousel = ({detail}) => {
+
+export const ItemDetailsCarousel = ({data}) => {
+
   return (
     <>
       <div
@@ -32,13 +34,13 @@ export const ItemDetailsCarousel = ({detail}) => {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src={detail.img01} className="d-block w-100" alt={detail.title} />
+            <img src={data.img01} className="d-block w-100" alt={data.title} />
           </div>
           <div className="carousel-item">
-            <img src={detail.img02} className="d-block w-100" alt={detail.title} />
+            <img src={data.img02} className="d-block w-100" alt={data.title} />
           </div>
           <div className="carousel-item">
-            <img src={detail.img03} className="d-block w-100" alt={detail.title} />
+            <img src={data.img03} className="d-block w-100" alt={data.title} />
           </div>
         </div>
         <button

@@ -1,6 +1,7 @@
-import { productos } from "./products";
 import { useEffect, useState } from "react";
+import { productos } from "./products";
 import { ItemList } from "./ItemList";
+// import { productDetail } from "../itemDetailContainer/productDetail";
 import "./cards.css";
 
 export const ItemListContainer = () => {

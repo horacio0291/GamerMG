@@ -1,7 +1,8 @@
 import React from "react";
 import { ItemDetailsCarousel } from "./ItemDetailsCarousel";
 
-export const ItemDetail = ({ detail }) => {
+export const ItemDetail = ({ data }) => {
+  console.log(data);
   return (
     <>
       <div className="container mt-5">
@@ -10,14 +11,14 @@ export const ItemDetail = ({ detail }) => {
             <div className="card mb-3">
               <div className="row g-0">
                 <div className="col-lg-6">
-                  <ItemDetailsCarousel detail={detail} />
+                  <ItemDetailsCarousel data={data} />
                 </div>
                 <div className="col-lg-6">
                   <div className="card-body">
-                    <h5 className="card-title">{detail.title}</h5>
+                    <h5 className="card-title">{data.title}</h5>
                     <hr />
                     <p className="card-text">
-                      <strong>${detail.price}</strong>
+                      <strong>${data.price}</strong>
                     </p>
                     <hr />
                     <div className="card-text">
@@ -25,14 +26,14 @@ export const ItemDetail = ({ detail }) => {
                         <ul>
                           <li>Garantia Oficial</li>
                           <li>
-                            {detail.stock > 0
+                            {data.stock > 0
                               ? "Stock Disponible"
                               : "Sin Stock"}
                           </li>
                           <li>Envíos a todo el país</li>
                         </ul>
                       </small>
-                      <hr/>
+                      <hr />
                       <button
                         className="btn btn-lg btn-dark mt-2"
                         type="button"
