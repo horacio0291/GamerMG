@@ -4,12 +4,12 @@ import { ItemDetail } from "./ItemDetail";
 import { productDetail } from "./productDetail";
 
 export const ItemDetailContainer = () => {
-  const [data, setData] = useState({});
+  const [data, setData] = useState();
   const { detalleId } = useParams();
 
   useEffect(() => {
     const getData = new Promise((res) => {
-      res(productDetail);
+     setTimeout(()=> res(productDetail),2000) 
     });
 
     getData
@@ -17,5 +17,5 @@ export const ItemDetailContainer = () => {
       .catch((err) => console.error(`Ocurrio el siguiente error: ${err}`));
   }, []);
 
-  return <ItemDetail data={data} />;
+  return data ? <ItemDetail data={data} /> : <h1>Cargando...</h1>;
 };
