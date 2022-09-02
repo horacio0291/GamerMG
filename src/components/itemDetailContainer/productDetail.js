@@ -7,6 +7,7 @@ export const productDetail = [
     img02: "../../assets/monitor01perfil.webp",
     img03: "../../assets/monitor01detras.webp",
     stock: 5,
+    category:"monitor",
   },
   {
     id: "2",
@@ -16,6 +17,7 @@ export const productDetail = [
     img02: "../../assets/monitor02-perfil.webp",
     img03: "../../assets/monitor02-atras.webp",
     stock: 5,
+    category:"monitor",
   },
   {
     id: "3",
@@ -25,6 +27,7 @@ export const productDetail = [
     img02: "../../assets/monitor03-perfil.webp",
     img03: "../../assets/monitor03-atras.webp",
     stock: 5,
+    category:"monitor",
   },
   {
     id: "4",
@@ -34,6 +37,7 @@ export const productDetail = [
     img02: "../../assets/gabinete01-perfil.webp",
     img03: "../../assets/gabinete01-frente.webp",
     stock: 5,
+    category:"gabinete"
   },
   {
     id: "5",
@@ -43,6 +47,7 @@ export const productDetail = [
     img02: "../../assets/gabinete02-perfil.webp",
     img03: "../../assets/gabinete02-frente.webp",
     stock: 5,
+    category:"gabinete"
   },
   {
     id: "6",
@@ -52,6 +57,7 @@ export const productDetail = [
     img02: "../../assets/gabinete03-perfil.webp",
     img03: "../../assets/gabinete03-frente.webp",
     stock: 5,
+    category:"gabinete"
   },
   {
     id: "7",
@@ -61,6 +67,7 @@ export const productDetail = [
     img02: "../../assets/teclado01-frente.webp",
     img03: "../../assets/teclado01-perfil.webp",
     stock: 5,
+    category:"teclado"
   },
   {
     id: "8",
@@ -70,6 +77,7 @@ export const productDetail = [
     img02: "../../assets/teclado02-frente.webp",
     img03: "../../assets/teclado02-perfil.webp",
     stock: 5,
+    category:"teclado"
   },
   {
     id: "9",
@@ -79,6 +87,7 @@ export const productDetail = [
     img02: "../../assets/teclado03-frente.webp",
     img03: "../../assets/teclado03-perfil.webp",
     stock: 5,
+    category:"teclado"
   },
   {
     id: "10",
@@ -88,6 +97,7 @@ export const productDetail = [
     img02: "../../assets/mouse01-frente.webp",
     img03: "../../assets/mouse01-perfil.webp",
     stock: 5,
+    category:"mouse"
   },
   {
     id: "11",
@@ -97,6 +107,7 @@ export const productDetail = [
     img02: "../../assets/mouse02-frente.webp",
     img03: "../../assets/mouse02-perfil.webp",
     stock: 5,
+    category:"mouse"
   },
   {
     id: "12",
@@ -106,5 +117,6 @@ export const productDetail = [
     img02: "../../assets/mouse03-frente.webp",
     img03: "../../assets/mouse03-perfil.webp",
     stock: 5,
+    category:"mouse"
   },
 ];

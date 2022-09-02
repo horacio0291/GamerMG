@@ -1,4 +1,4 @@
-import {NavLink} from "react-router-dom"
+import { NavLink } from "react-router-dom";
 import { CartWidget } from "./CartWidget";
 import "./navbar.css";
 
@@ -43,11 +43,40 @@ export const Navbar = () => {
                   Componentes
                 </NavLink>
               </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/">
-                  Extras
+              <li className="nav-item dropdown">
+                <NavLink
+                  to="/"
+                  className="nav-link dropdown-toggle"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Categorias
                 </NavLink>
+                <ul className="dropdown-menu">
+                  <li>
+                    <NavLink className="dropdown-item" to="/componentes/monitor">
+                      Monitores
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink className="dropdown-item" to="/componentes/gabinete">
+                      Gabinetes
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink className="dropdown-item" to="/componentes/teclado">
+                      Teclados
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink className="dropdown-item" to="/componentes/mouse">
+                      Mouse
+                    </NavLink>
+                  </li>
+                </ul>
               </li>
+
               <CartWidget />
             </ul>
           </div>

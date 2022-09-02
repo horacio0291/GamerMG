@@ -1,20 +1,26 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { productos } from "./products";
 import { ItemList } from "./ItemList";
-// import { productDetail } from "../itemDetailContainer/productDetail";
 import "./cards.css";
 
 export const ItemListContainer = () => {
   const [data, setData] = useState([]);
+  const { categoriaId } = useParams();
 
   useEffect(() => {
     const getData = new Promise((res) => {
       res(productos);
     });
-    getData
-      .then((res) => setData(res))
-      .catch((err) => console.error(`Ocurrio el siguiente error: ${err}`));
-  }, []);
+    if (categoriaId) {
+      getData.then((res) =>
+        setData(res.filter((producto) => producto.category === categoriaId))
+      );
+    } else {
+      getData.then((res) => setData(res));
+    }
+    console.log(data)
+  }, [categoriaId]);
 
   return (
     <div>
