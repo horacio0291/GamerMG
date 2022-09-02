@@ -7,15 +7,6 @@ export const Navbar = () => {
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
         <div className="container-fluid ">
-          <NavLink className="navbar-brand" to="/">
-            <img
-              className="logo"
-              src="../../assets/logo.png"
-              alt="logo"
-              width="70px"
-            />
-          </NavLink>
-
           <button
             className="navbar-toggler"
             type="button"
@@ -34,12 +25,6 @@ export const Navbar = () => {
             <ul className="navbar-nav w-100 justify-content-evenly">
               <li className="nav-item">
                 <NavLink className="nav-link" to="/componentes">
-                  Equipos Armados
-                  <span className="visually-hidden">(current)</span>
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/componentes">
                   Componentes
                 </NavLink>
               </li>
@@ -55,17 +40,26 @@ export const Navbar = () => {
                 </NavLink>
                 <ul className="dropdown-menu">
                   <li>
-                    <NavLink className="dropdown-item" to="/componentes/monitor">
+                    <NavLink
+                      className="dropdown-item"
+                      to="/componentes/monitor"
+                    >
                       Monitores
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink className="dropdown-item" to="/componentes/gabinete">
+                    <NavLink
+                      className="dropdown-item"
+                      to="/componentes/gabinete"
+                    >
                       Gabinetes
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink className="dropdown-item" to="/componentes/teclado">
+                    <NavLink
+                      className="dropdown-item"
+                      to="/componentes/teclado"
+                    >
                       Teclados
                     </NavLink>
                   </li>
