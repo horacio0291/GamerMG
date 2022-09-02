@@ -1,5 +1,6 @@
 import React from "react";
 import { ItemDetailsCarousel } from "./ItemDetailsCarousel";
+import { ItemCounts } from "../ItemListContainer/ItemCounts";
 
 export const ItemDetail = ({ data }) => {
   console.log(data);
@@ -26,22 +27,16 @@ export const ItemDetail = ({ data }) => {
                         <ul>
                           <li>Garantia Oficial</li>
                           <li>
-                            {data.stock > 0
-                              ? "Stock Disponible"
-                              : "Sin Stock"}
+                            {data.stock > 0 ? "Stock Disponible" : "Sin Stock"}
                           </li>
                           <li>Envíos a todo el país</li>
                         </ul>
                       </small>
                       <hr />
-                      <button
-                        className="btn btn-lg btn-dark mt-2"
-                        type="button"
-                      >
-                        Agregar al carrito
-                      </button>
+
                     </div>
                   </div>
+                      <ItemCounts className="mt-5 p-5" stock={data.stock} />
                 </div>
               </div>
             </div>

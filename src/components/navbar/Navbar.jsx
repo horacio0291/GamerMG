@@ -10,7 +10,7 @@ export const Navbar = () => {
           <NavLink className="navbar-brand" to="/">
             <img
               className="logo"
-              src="assets/logo.png"
+              src="../../assets/logo.png"
               alt="logo"
               width="70px"
             />

@@ -23,16 +23,16 @@ export const ItemCounts = ({stock}) => {
         <button
           onClick={() => onSumar()}
           type="button"
-          className="btn btn-outline-dark"
+          className="btn btn-outline-light"
           disabled={count !== stock ? false : true}
         >
           +
         </button>
-        <span className="text-black">{count}</span>
+        <span className="text-white">{count}</span>
         <button
           onClick={() => onRestar()}
           type="button"
-          className="btn btn-outline-dark"
+          className="btn btn-outline-light"
           disabled={count !== 1 ? false : true}
         >
           -

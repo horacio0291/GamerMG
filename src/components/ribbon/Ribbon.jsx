@@ -9,7 +9,7 @@ export const Ribbon = () => {
           <div className="row align-items-center">
             <div className="col-sm p-3">
               <img
-                src="assets/01-ribbon.webp"
+                src="../../assets/01-ribbon.webp"
                 className="w-75 mx-auto d-block"
                 alt="ribbon"
               />
