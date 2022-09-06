@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export const ItemCounts = ({stock}) => {
+export const ItemCounts = ({stock, onClick}) => {
  
 
   const [count, setCount] = useState(1);
@@ -39,7 +39,7 @@ export const ItemCounts = ({stock}) => {
         </button>
       </div>
       <div className="d-grid gap-2">
-        <button className="btn btn-lg btn-dark mt-2" type="button">
+        <button className="btn btn-lg btn-dark mt-2" type="button" onClick={onClick}>
           Agregar al carrito
         </button>
       </div>

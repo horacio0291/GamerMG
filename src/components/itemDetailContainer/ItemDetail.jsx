@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { ItemDetailsCarousel } from "./ItemDetailsCarousel";
 import { ItemCounts } from "../ItemListContainer/ItemCounts";
+import { Link } from "react-router-dom";
 
 export const ItemDetail = ({ data }) => {
-  console.log(data);
+  const [goToCart, setGoToCart] = useState(false);
+
+  const onAdd = () => {
+    setGoToCart(true);
+  };
+
   return (
     <>
       <div className="container mt-5">
@@ -33,10 +39,25 @@ export const ItemDetail = ({ data }) => {
                         </ul>
                       </small>
                       <hr />
-
                     </div>
                   </div>
-                      <ItemCounts className="mt-5 p-5" stock={data.stock} />
+                  <div className="d-grid gap-2">
+                    {goToCart ? (
+                      <Link
+                        to="/cart"
+                        className="btn btn-lg btn-dark mt-2 "
+                        type="button"
+                      >
+                        Finalizar compra
+                      </Link>
+                    ) : (
+                      <ItemCounts
+                        className="mt-5 p-5"
+                        stock={data.stock}
+                        onClick={onAdd}
+                      />
+                    )}
+                  </div>
                 </div>
               </div>
             </div>

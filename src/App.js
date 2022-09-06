@@ -6,6 +6,8 @@ import { Navbar } from "./components/navbar/Navbar";
 import { Carousel } from "./components/carousel/Carousel";
 import { Ribbon } from "./components/ribbon/Ribbon";
 import Serccher from "./components/navbar/Serccher";
+import { Cart } from "./components/cart/Cart";
+import { Footer } from "./components/footer/Footer";
 
 function App() {
   return (
@@ -24,7 +26,9 @@ function App() {
           />
           <Route path="/detalle/:detalleId" element={<ItemDetailContainer />} />
           <Route path="/notebooks" element={<ItemDetailContainer />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </>
   );
