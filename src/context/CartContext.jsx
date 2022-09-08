@@ -25,6 +25,8 @@ export const CartProvider = ({children}) => {
 
     const removeItem = (id) => setCart(cart.filter(product => product.id !== id));
 
+    const totalProducts = () => cart.reduce((collector, product)=> collector + product.quantity,0);
+
     
 
   return (
@@ -33,6 +35,7 @@ export const CartProvider = ({children}) => {
         isInCart,
         removeItem,
         addItem,
+        totalProducts,
         
     }}>
         {children}
