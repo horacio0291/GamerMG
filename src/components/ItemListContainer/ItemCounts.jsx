@@ -8,6 +8,7 @@ export const ItemCounts = ({stock, onClick}) => {
   const onSumar = () => {
     if (count < stock) {
       setCount(count + 1);
+      stock --;
     } else return;
   };
 
@@ -39,7 +40,10 @@ export const ItemCounts = ({stock, onClick}) => {
         </button>
       </div>
       <div className="d-grid gap-2">
-        <button className="btn btn-lg btn-dark mt-2" type="button" onClick={onClick}>
+        {/* <button className="btn btn-lg btn-dark mt-2" type="button" onClick={onClick}>
+          Agregar al carrito
+        </button> */}
+        <button className="btn btn-lg btn-dark mt-2" type="button" onClick={()=>onClick(count)}>
           Agregar al carrito
         </button>
       </div>

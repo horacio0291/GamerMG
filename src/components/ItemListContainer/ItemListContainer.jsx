@@ -19,7 +19,7 @@ export const ItemListContainer = () => {
     } else {
       getData.then((res) => setData(res));
     }
-    console.log(data)
+    
   }, [categoriaId]);
 
   return (
