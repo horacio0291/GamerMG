@@ -7,13 +7,13 @@ import { Link } from "react-router-dom";
 export const ItemDetail = ({ data }) => {
   const [goToCart, setGoToCart] = useState(false);
 
-  const {addItem} = useCartContext();
+  const { addItem } = useCartContext();
 
   const onAdd = (quantity) => {
     setGoToCart(true);
     addItem(data, quantity);
-    
-    
+    let stock = data.stock - quantity
+    data.stock = stock
   };
 
   return (

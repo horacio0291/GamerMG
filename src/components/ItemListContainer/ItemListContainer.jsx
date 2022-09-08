@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { productos } from "./products";
+// import { productos } from "./products";
+import { productDetail } from "../itemDetailContainer/productDetail";
 import { ItemList } from "./ItemList";
 import "./cards.css";
 
@@ -10,7 +11,7 @@ export const ItemListContainer = () => {
 
   useEffect(() => {
     const getData = new Promise((res) => {
-      res(productos);
+      res(productDetail);
     });
     if (categoriaId) {
       getData.then((res) =>

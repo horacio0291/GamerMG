@@ -8,13 +8,13 @@ export const Item = ({ productos }) => {
         <div className="card w-100 card-border mb-5">
           <Link to={`/detalle/${productos.id}`}>
             <img
-              src={productos.img}
+              src={productos.img01}
               className="card-img-top"
               alt={productos.title}
             />
           </Link>
           <div className="card-body bg-white">
-            <p className="text-black text-center">{productos.title}</p>
+            <p className="text-black text-center">{productos.category}</p>
             <p className="text-black text-center">${productos.price}</p>
           </div>
         </div>
