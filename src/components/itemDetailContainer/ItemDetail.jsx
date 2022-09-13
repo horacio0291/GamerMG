@@ -56,6 +56,7 @@ export const ItemDetail = ({ data }) => {
                       >
                         Finalizar compra
                       </Link>
+                      
                     ) : (
                       <ItemCounts
                         className="mt-5 p-5"
@@ -63,6 +64,13 @@ export const ItemDetail = ({ data }) => {
                         onClick={onAdd}
                       />
                     )}
+                    <Link
+                        to="/"
+                        className="btn btn-lg btn-dark mt-2 "
+                        type="button"
+                      >
+                       Seguir Comprando
+                      </Link>
                   </div>
                 </div>
               </div>

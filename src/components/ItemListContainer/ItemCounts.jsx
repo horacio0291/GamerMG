@@ -39,9 +39,6 @@ export const ItemCounts = ({stock, onClick}) => {
         </button>
       </div>
       <div className="d-grid gap-2">
-        {/* <button className="btn btn-lg btn-dark mt-2" type="button" onClick={onClick}>
-          Agregar al carrito
-        </button> */}
         <button disabled={stock<=0} className="btn btn-lg btn-dark mt-2" type="button" onClick={()=>onClick(count)} >
           Agregar al carrito
         </button>
