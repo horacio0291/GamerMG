@@ -3,8 +3,10 @@ import { useCartContext } from "../../context/CartContext";
 import { ItemDetailsCarousel } from "./ItemDetailsCarousel";
 import { ItemCounts } from "../ItemListContainer/ItemCounts";
 import { Link } from "react-router-dom";
+import { getFirestore, doc,updateDoc } from "firebase/firestore";
 
-export const ItemDetail = ({ data }) => {
+
+export const ItemDetail = ({ data, setData }) => {
   const [goToCart, setGoToCart] = useState(false);
 
   const { addItem } = useCartContext();
@@ -12,8 +14,14 @@ export const ItemDetail = ({ data }) => {
   const onAdd = (quantity) => {
     setGoToCart(true);
     addItem(data, quantity);
-    let stock = data.stock - quantity
-    data.stock = stock
+    data.stock = data.stock - quantity;
+    // let stock = data.stock
+
+    // const querydb = getFirestore();
+    // const queryDoc  = doc(querydb, 'productos', stock);
+    // updateDoc(queryDoc)
+    // .then(res => setData({stock:res.id, ...res.data()}))
+   
   };
 
   return (

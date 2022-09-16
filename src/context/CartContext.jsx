@@ -19,7 +19,7 @@ export const CartProvider = ({children}) => {
         }
     }
 
-    console.log(cart)
+   
 
     const clear = () => setCart([]);
 
