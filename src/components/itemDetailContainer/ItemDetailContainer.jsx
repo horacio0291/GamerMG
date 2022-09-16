@@ -16,6 +16,6 @@ export const ItemDetailContainer = () => {
 
   },[detalleId])
 
-  console.log(data)
+
   return data ? <ItemDetail data={data} setData={setData} /> : <h1>Cargando...</h1>;
 };

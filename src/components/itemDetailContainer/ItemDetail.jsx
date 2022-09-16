@@ -2,18 +2,27 @@ import React, { useState } from "react";
 import { useCartContext } from "../../context/CartContext";
 import { ItemDetailsCarousel } from "./ItemDetailsCarousel";
 import { ItemCounts } from "../ItemListContainer/ItemCounts";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { doc, getDoc, getFirestore, updateDoc } from "firebase/firestore";
 
 export const ItemDetail = ({ data, setData }) => {
   const [goToCart, setGoToCart] = useState(false);
-
+  const { detalleId } = useParams();
+  
   const { addItem } = useCartContext();
-
   const onAdd = (quantity) => {
     setGoToCart(true);
     addItem(data, quantity);
     data.stock = data.stock - quantity;
   };
+
+  const querydb = getFirestore();
+  const queryDoc  = doc(querydb, 'productos', detalleId);
+  updateDoc(queryDoc,{
+    "stock":data.stock
+  })
+  // .then(res => console.log({id:res.id, ...res.data()}))
+
 
   return (
     <>
