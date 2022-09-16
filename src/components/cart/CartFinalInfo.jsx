@@ -1,8 +1,11 @@
 import React from "react";
 import Swal from "sweetalert2";
+import { useCartContext } from "../../context/CartContext";
 
 export const CartFinalInfo = ({ totalPrice }) => {
+  const { clear } = useCartContext();
   const confirm = () => {
+    clear();
     Swal.fire("Muchas Gracias", "Por comprar en GamerMG", "success");
   };
 

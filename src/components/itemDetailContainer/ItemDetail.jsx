@@ -3,8 +3,6 @@ import { useCartContext } from "../../context/CartContext";
 import { ItemDetailsCarousel } from "./ItemDetailsCarousel";
 import { ItemCounts } from "../ItemListContainer/ItemCounts";
 import { Link } from "react-router-dom";
-import { getFirestore, doc,updateDoc } from "firebase/firestore";
-
 
 export const ItemDetail = ({ data, setData }) => {
   const [goToCart, setGoToCart] = useState(false);
@@ -15,13 +13,6 @@ export const ItemDetail = ({ data, setData }) => {
     setGoToCart(true);
     addItem(data, quantity);
     data.stock = data.stock - quantity;
-    // let stock = data.stock
-
-    // const querydb = getFirestore();
-    // const queryDoc  = doc(querydb, 'productos', stock);
-    // updateDoc(queryDoc)
-    // .then(res => setData({stock:res.id, ...res.data()}))
-   
   };
 
   return (
@@ -64,7 +55,6 @@ export const ItemDetail = ({ data, setData }) => {
                       >
                         Finalizar compra
                       </Link>
-                      
                     ) : (
                       <ItemCounts
                         className="mt-5 p-5"
@@ -73,12 +63,12 @@ export const ItemDetail = ({ data, setData }) => {
                       />
                     )}
                     <Link
-                        to="/"
-                        className="btn btn-lg btn-dark mt-2 "
-                        type="button"
-                      >
-                       Seguir Comprando
-                      </Link>
+                      to="/"
+                      className="btn btn-lg btn-dark mt-2 "
+                      type="button"
+                    >
+                      Seguir Comprando
+                    </Link>
                   </div>
                 </div>
               </div>
