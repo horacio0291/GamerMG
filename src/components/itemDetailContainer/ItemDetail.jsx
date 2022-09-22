@@ -21,8 +21,7 @@ export const ItemDetail = ({ data, setData }) => {
   updateDoc(queryDoc,{
     "stock":data.stock
   })
-  // .then(res => console.log({id:res.id, ...res.data()}))
-
+ 
 
   return (
     <>

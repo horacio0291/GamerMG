@@ -1,12 +1,35 @@
 import React from "react";
 import Swal from "sweetalert2";
 import { useCartContext } from "../../context/CartContext";
-
+import { addDoc, collection, getFirestore } from "firebase/firestore";
 export const CartFinalInfo = ({ totalPrice }) => {
-  const { clear } = useCartContext();
-  const confirm = () => {
+  const { clear, cart } = useCartContext();
+  const confirm = (id) => {
     clear();
-    Swal.fire("Muchas Gracias", "Por comprar en GamerMG", "success");
+    Swal.fire("Muchas Gracias", "ID de compra: " + id, "success");
+  };
+
+  const order = {
+    buyer: {
+      name: "Horacio",
+      email: "horacio0291@gmail.com",
+      phone: 1132526503,
+      address: "Monte Grande",
+    },
+
+    items: cart.map((product) => ({
+      id: product.id,
+      title: product.title,
+      price: product.price,
+      quantity: product.quantity,
+    })),
+    total: totalPrice(),
+  };
+
+  const handleClick = () => {
+    const db = getFirestore();
+    const orderCollection = collection(db, "orders");
+    addDoc(orderCollection, order).then(({ id }) => confirm(id));
   };
 
   return (
@@ -41,7 +64,7 @@ export const CartFinalInfo = ({ totalPrice }) => {
           <div className="card-body">
             <p className="fs-4">Total:</p>
             <p className="fs-3">${totalPrice()}</p>
-            <button onClick={confirm} className="btn btn-outline-primary">
+            <button onClick={handleClick} className="btn btn-outline-primary">
               Comprar
             </button>
           </div>
