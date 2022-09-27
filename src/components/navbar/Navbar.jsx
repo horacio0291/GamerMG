@@ -24,7 +24,21 @@ export const Navbar = () => {
           >
             <ul className="navbar-nav w-100 justify-content-evenly">
               <li className="nav-item">
-                <NavLink className="nav-link" to="/componentes">
+                <NavLink className="navbar-brand" to="/">
+                  <img
+                    className="logo"
+                    src="../../assets/logo.png"
+                    alt="logo"
+                    width="70px"
+                  />
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  className="nav-link"
+                  to="/componentes"
+                  activeClassName="active"
+                >
                   Componentes
                 </NavLink>
               </li>
@@ -43,6 +57,7 @@ export const Navbar = () => {
                     <NavLink
                       className="dropdown-item"
                       to="/componentes/monitor"
+                      activeClassName="active"
                     >
                       Monitores
                     </NavLink>
@@ -51,6 +66,7 @@ export const Navbar = () => {
                     <NavLink
                       className="dropdown-item"
                       to="/componentes/gabinete"
+                      activeClassName="active"
                     >
                       Gabinetes
                     </NavLink>
@@ -59,12 +75,17 @@ export const Navbar = () => {
                     <NavLink
                       className="dropdown-item"
                       to="/componentes/teclado"
+                      activeClassName="active"
                     >
                       Teclados
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink className="dropdown-item" to="/componentes/mouse">
+                    <NavLink
+                      className="dropdown-item"
+                      to="/componentes/mouse"
+                      activeClassName="active"
+                    >
                       Mouse
                     </NavLink>
                   </li>

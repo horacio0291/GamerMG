@@ -6,7 +6,6 @@ Se trata de un E-commerse de productos para PC
 
 ## Features
 
--  Buscador de productos por input
 -  Cards interactivas para acceder a la información del producto
 -  Carrito de compras funcional
 -  100% Responsive
@@ -21,7 +20,7 @@ Install my-project with npm
     
 ## Tech Stack
 
-**Client:** React, Redux, Bootstrap 5
+**Client:** React, Redux, Bootstrap 5, sweetAlert2
 
 
 

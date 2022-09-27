@@ -10,3 +10,7 @@
     color: rgb(74, 137, 220);
 }
 
+.active{
+    font-weight: bold;
+    color: rgb(74, 137, 220);
+}

@@ -1,11 +1,7 @@
-
 import { useCartContext } from "../../context/CartContext";
 
 export const ItemCart = ({ product }) => {
   const { removeItem } = useCartContext();
- 
- 
-
 
   return (
     <div className="card mb-3">
@@ -25,9 +21,6 @@ export const ItemCart = ({ product }) => {
         <div className="col-2 d-flex align-items-center">
           <div className="card-body">
             <p className="m-3">Precio: ${product.price}</p>
-            <button className="btn btn-outline-primary m-3">+</button>
-            <span>{product.quantity}</span>
-            <button className="btn btn-outline-primary m-3">-</button>
           </div>
         </div>
         <div className="col-1 d-flex align-items-center">

@@ -14,7 +14,7 @@ export const Item = ({ productos }) => {
             />
           </Link>
           <div className="card-body bg-white">
-            <p className="text-black text-center">{productos.category}</p>
+            <p className="text-black text-center">{productos.title}</p>
             <p className="text-black text-center">${productos.price}</p>
           </div>
         </div>
